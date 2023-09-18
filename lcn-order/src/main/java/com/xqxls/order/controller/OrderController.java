@@ -29,7 +29,7 @@ public class OrderController {
         date.put("payName",bean.getOrderName()+"pay");
 
         restTemplate.postForEntity("http://lcn-pay/add-pay",date,String.class);
-        int i = 1/0;
+//        int i = 1/0;
         tblOrderDao.insert(bean);
         return "新增订单成功";
     }
